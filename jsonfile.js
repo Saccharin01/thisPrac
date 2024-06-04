@@ -8,5 +8,13 @@ const fs = require(`fs`)
 })
 .then((data)=>{
   console.log(data)
+  console.log(typeof(data))
+  fs.writeFile('parseJson.json', data, 'utf-8',(err)=>{
+    if(err){
+      console.log(err)
+    } else {
+      console.log(`Process done!`)
+    }
+  })
 })
 
