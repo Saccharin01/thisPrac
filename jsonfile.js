@@ -21,16 +21,22 @@ const fs = require(`fs`)
 })
 
 
-function createserver(reqMethod, reqUrl, c){
+function createserver(reqMethod, reqUrl, headerData, writeData){
   
-  const server  = http.createServer((req,res)=>{
+  const server = http.createServer((req,res)=>{
     if(req.method === `${reqMethod}`){
       if(req.url === `${reqUrl}`){
+        res.writeHead(`${headerData}`)
+        res.write(`${writeData}`)
+        res.end()
       }
     }
   })
 }
 
 // todo 인스턴스화 해야함
+// todo 자동 분류화 되게?
+// todo 들어오는 요청에 대한 리터럴 처리가 맞아?
+// todo 수현 씨 것 받아와야 함
 
 
