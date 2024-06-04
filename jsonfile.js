@@ -22,16 +22,31 @@ const fs = require(`fs`)
 
 
 function createserver(reqMethod, reqUrl, headerData, writeData){
-  
-  const server = http.createServer((req,res)=>{
-    if(req.method === `${reqMethod}`){
-      if(req.url === `${reqUrl}`){
-        res.writeHead(`${headerData}`)
-        res.write(`${writeData}`)
-        res.end()
+  if(reqMethod === 'get'){
+
+    const server = http.createServer((req,res)=>{
+      if(req.method === `${reqMethod}`){
+        if(req.url === `${reqUrl}`){
+          res.writeHead(`${headerData}`)
+          res.write(`${writeData}`)
+          res.end()
+        }
       }
-    }
-  })
+    })
+  }
+  else if(reqMethod === 'post'){
+
+
+    const server = http.createServer((req,res)=>{
+      if(req.method === `${reqMethod}`){
+        if(req.url === `${reqUrl}`){
+          res.writeHead(`${headerData}`)
+          res.write(`${writeData}`)
+          res.end()
+        }
+      }
+    })
+  }
 }
 
 // todo 인스턴스화 해야함
