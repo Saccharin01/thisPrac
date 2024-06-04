@@ -9,7 +9,7 @@ const fs = require(`fs`)
 .then((data)=>{
   console.log(data)
   console.log(typeof(data))
-  let sumdata = JSON.stringify(data)
+  let sumdata = JSON.stringify(data, null, 2)
   console.log(typeof(sumdata))
   fs.writeFile('parseJson.json', sumdata, 'utf-8',(err)=>{
     if(err){
