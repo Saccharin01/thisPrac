@@ -7,3 +7,11 @@ function workThree(a, b){
 }
 
 workThree(1,2)
+
+
+let itsMe = {
+  Name : "조우식",
+  Age : 30,
+  Home : "월평동",
+  test : this
+}
