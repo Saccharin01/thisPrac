@@ -20,3 +20,17 @@ const fs = require(`fs`)
   })
 })
 
+
+function createserver(reqMethod, reqUrl, c){
+  
+  const server  = http.createServer((req,res)=>{
+    if(req.method === `${reqMethod}`){
+      if(req.url === `${reqUrl}`){
+      }
+    }
+  })
+}
+
+// todo 인스턴스화 해야함
+
+
