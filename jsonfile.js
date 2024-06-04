@@ -37,6 +37,7 @@ function createserver(reqMethod, reqUrl, headerData, writeData){
 // todo 인스턴스화 해야함
 // todo 자동 분류화 되게?
 // todo 들어오는 요청에 대한 리터럴 처리가 맞아?
-// todo 수현 씨 것 받아와야 함
+// todo 수현 씨 것 받아와야 함 
+// todo 메서드화? 인스턴스해서?
 
 
