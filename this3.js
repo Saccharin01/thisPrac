@@ -10,8 +10,14 @@ workThree(1,2)
 
 
 let itsMe = {
-  Name : "조우식",
+  name : "조우식",
   Age : 30,
   Home : "월평동",
-  test : this
+  test : this,
+  sentence : function() {
+    return this.name +"은 미남이다";
+  }
 }
+
+console.dir(`객체에서 바라보는 this : `, itsMe);
+console.log('메서드로 보는 this :', itsMe.sentence())
